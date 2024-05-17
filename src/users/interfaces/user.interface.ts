@@ -1,9 +1,14 @@
 
 export interface User {
 
-    id: string
+    readonly id: string
 
-    email: string
+    readonly email: string
 
-    password: string
+    readonly password: string
+}
+
+export interface LoginRsp {
+
+    readonly accessToken: string
 }
