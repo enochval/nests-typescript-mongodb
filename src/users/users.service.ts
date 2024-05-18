@@ -29,6 +29,8 @@ export class UsersService {
             { password: await this.hasherService.passwordHasher(signUpDTO.password) }
         )
 
+        console.log(signUpDTO.email)
+
         const { email } = await new this.userModel(signUpDTO).save()
         return { email }
     }
